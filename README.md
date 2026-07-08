@@ -1,4 +1,5 @@
 # 💳 Credit Card Approval Prediction using Machine Learning
+Live Demo: https://sample-project-for-deploy-6sfb-lake.vercel.app/
 
 ## 📌 Project Overview
 
