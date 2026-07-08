@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Approval Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        💳 CreditPredict
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict">Prediction</a></li>
+    </ul>
+
+</nav>
+
+<div class="container">
+
+    <div class="form-card">
+
+        <h1>Credit Card Approval Prediction</h1>
+
+        <p class="subtitle">
+            Enter the applicant details below to predict whether the
+            credit card application is likely to be approved.
+        </p>
+
+        <form action="/result" method="POST">
+
+            <div class="grid">
+
+                <!-- Gender -->
+
+                <div class="input-box">
+
+                    <label>Gender</label>
+
+                    <select name="gender" required>
+
+                        <option value="">Select</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Own Car -->
+
+                <div class="input-box">
+
+                    <label>Own Car</label>
+
+                    <select name="own_car" required>
+
+                        <option value="">Select</option>
+                        <option value="Y">Yes</option>
+                        <option value="N">No</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Own Realty -->
+
+                <div class="input-box">
+
+                    <label>Own House</label>
+
+                    <select name="own_realty" required>
+
+                        <option value="">Select</option>
+                        <option value="Y">Yes</option>
+                        <option value="N">No</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Children -->
+
+                <div class="input-box">
+
+                    <label>Number of Children</label>
+
+                    <input
+                        type="number"
+                        name="children"
+                        min="0"
+                        required>
+
+                </div>
+
+                <!-- Income -->
+
+                <div class="input-box">
+
+                    <label>Annual Income</label>
+
+                    <input
+                        type="number"
+                        name="income"
+                        min="0"
+                        step="1000"
+                        required>
+
+                </div>
+
+                <!-- Income Type -->
+
+                <div class="input-box">
+
+                    <label>Income Type</label>
+
+                    <select name="income_type" required>
+
+                        <option value="">Select</option>
+
+                        <option value="Working">Working</option>
+                        <option value="Commercial associate">Commercial Associate</option>
+                        <option value="Pensioner">Pensioner</option>
+                        <option value="State servant">State Servant</option>
+                        <option value="Student">Student</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Education -->
+
+                <div class="input-box">
+
+                    <label>Education</label>
+
+                    <select name="education" required>
+
+                        <option value="">Select</option>
+
+                        <option value="Secondary / secondary special">Secondary</option>
+
+                        <option value="Higher education">Higher Education</option>
+
+                        <option value="Incomplete higher">Incomplete Higher</option>
+
+                        <option value="Lower secondary">Lower Secondary</option>
+
+                        <option value="Academic degree">Academic Degree</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Family Status -->
+
+                <div class="input-box">
+
+                    <label>Family Status</label>
+
+                    <select name="family_status" required>
+
+                        <option value="">Select</option>
+
+                        <option value="Married">Married</option>
+
+                        <option value="Single / not married">Single</option>
+
+                        <option value="Civil marriage">Civil Marriage</option>
+
+                        <option value="Separated">Separated</option>
+
+                        <option value="Widow">Widow</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Housing -->
+
+                <div class="input-box">
+
+                    <label>Housing Type</label>
+
+                    <select name="housing_type" required>
+
+                        <option value="">Select</option>
+
+                        <option value="House / apartment">House / Apartment</option>
+
+                        <option value="With parents">With Parents</option>
+
+                        <option value="Municipal apartment">Municipal Apartment</option>
+
+                        <option value="Rented apartment">Rented Apartment</option>
+
+                        <option value="Office apartment">Office Apartment</option>
+
+                        <option value="Co-op apartment">Co-op Apartment</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Age -->
+
+                <div class="input-box">
+
+                    <label>Days Since Birth</label>
+
+                    <input
+                        type="number"
+                        name="days_birth"
+                        required>
+
+                </div>
+
+                <!-- Employment -->
+
+                <div class="input-box">
+
+                    <label>Days Employed</label>
+
+                    <input
+                        type="number"
+                        name="days_employed"
+                        required>
+
+                </div>
+
+                <!-- Mobile -->
+
+                <div class="input-box">
+
+                    <label>Has Mobile</label>
+
+                    <select name="mobil">
+
+                        <option value="1">Yes</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Work Phone -->
+
+                <div class="input-box">
+
+                    <label>Work Phone</label>
+
+                    <select name="work_phone">
+
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Phone -->
+
+                <div class="input-box">
+
+                    <label>Phone</label>
+
+                    <select name="phone">
+
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="input-box">
+
+                    <label>Email</label>
+
+                    <select name="email">
+
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+
+                    </select>
+
+                </div>
+
+                <!-- Family Members -->
+
+                <div class="input-box">
+
+                    <label>Family Members</label>
+
+                    <input
+                        type="number"
+                        name="family_members"
+                        min="1"
+                        step="0.5"
+                        required>
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn">
+
+                Predict Approval
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

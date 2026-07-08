@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <div class="logo">
+
+            💳 CreditPredict
+
+        </div>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Prediction</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Result Container -->
+
+    <div class="result-container">
+
+        {% if prediction == "Approved ✅" %}
+
+        <div class="result-card approved">
+
+            <div class="icon">
+
+                ✅
+
+            </div>
+
+            <h1>
+
+                Credit Card Approved
+
+            </h1>
+
+            <p>
+
+                Congratulations!
+
+                Based on the information provided,
+                the applicant is likely to receive
+                credit card approval.
+
+            </p>
+
+        </div>
+
+        {% elif prediction == "Rejected ❌" %}
+
+        <div class="result-card rejected">
+
+            <div class="icon">
+
+                ❌
+
+            </div>
+
+            <h1>
+
+                Credit Card Rejected
+
+            </h1>
+
+            <p>
+
+                Based on the provided applicant
+                information, the model predicts
+                that the application is likely
+                to be rejected.
+
+            </p>
+
+        </div>
+
+        {% else %}
+
+        <div class="result-card error">
+
+            <div class="icon">
+
+                ⚠️
+
+            </div>
+
+            <h1>
+
+                Prediction Error
+
+            </h1>
+
+            <p>
+
+                {{ error }}
+
+            </p>
+
+        </div>
+
+        {% endif %}
+
+        <!-- Buttons -->
+
+        <div class="button-group">
+
+            <a href="/">
+
+                <button class="home-btn">
+
+                    🏠 Home
+
+                </button>
+
+            </a>
+
+            <a href="/predict">
+
+                <button class="predict-btn">
+
+                    🔄 Predict Again
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
