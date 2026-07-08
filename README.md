@@ -191,33 +191,6 @@ Displays the prediction result as:
 
 ---
 
-# 📁 Project Structure
-
-```
-Credit-Card-Approval-Prediction/
-│
-├── app.py
-├── credit_card_model.pkl
-├── gender_encoder.pkl
-├── car_encoder.pkl
-├── realty_encoder.pkl
-├── income_encoder.pkl
-├── education_encoder.pkl
-├── family_encoder.pkl
-├── housing_encoder.pkl
-├── requirements.txt
-├── README.md
-│
-├── static/
-│   └── style.css
-│
-└── templates/
-    ├── home.html
-    ├── index.html
-    └── result.html
-```
-
----
 
 # ⚙ Installation
 
