@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Credit Card Approval Prediction</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -39,7 +36,6 @@
             Enter the applicant details below to predict whether the
             credit card application is likely to be approved.
         </p>
-
         <form action="/result" method="POST">
 
             <div class="grid">
@@ -312,9 +308,7 @@
                         min="1"
                         step="0.5"
                         required>
-
                 </div>
-
             </div>
 
             <button type="submit" class="btn">
