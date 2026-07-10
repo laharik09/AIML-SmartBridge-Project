@@ -1,13 +1,10 @@
 
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
-
-
 body{
 
     background:linear-gradient(135deg,#0f4c81,#1d72b8);
@@ -161,7 +158,6 @@ nav ul li a:hover{
     font-weight:600;
 
     transition:.3s;
-
 }
 
 .btn:hover{
@@ -561,7 +557,6 @@ form .btn{
         text-align:center;
 
     }
-
     .hero-left,
 
     .hero-right{
@@ -649,7 +644,6 @@ form .btn{
     }
 
 }
-
 @media(max-width:500px){
 
     .button-group{
@@ -657,9 +651,7 @@ form .btn{
         flex-direction:column;
 
         width:100%;
-
     }
-
     .home-btn,
 
     .predict-btn{
